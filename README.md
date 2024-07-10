@@ -15,14 +15,14 @@ This tool is not yet officially supported by Google. It is currently maintained 
 ## Blog
 
 I'm going to use these links to GitHub Discussions as a blog of sorts, until I can set up something more proper:
-* yamlfmt's recent slow development [#149](https://github.com/google/yamlfmt/discussions/149)
-* Issues related to the yaml.v3 library [#148](https://github.com/google/yamlfmt/discussions/148)
+* yamlfmt's recent slow development [#149](https://github.com/fancom/yamlfmt/discussions/149)
+* Issues related to the yaml.v3 library [#148](https://github.com/fancom/yamlfmt/discussions/148)
 
 ## Installation
 
 To download the `yamlfmt` command, you can download the desired binary from releases or install the module directly:
 ```
-go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+go install github.com/fancom/yamlfmt/cmd/yamlfmt@latest
 ```
 This currently requires Go version 1.18 or greater.
 

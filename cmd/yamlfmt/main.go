@@ -20,10 +20,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/command"
-	"github.com/google/yamlfmt/formatters/basic"
-	"github.com/google/yamlfmt/internal/logger"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/command"
+	"github.com/fancom/yamlfmt/formatters/basic"
+	"github.com/fancom/yamlfmt/internal/logger"
 )
 
 var (

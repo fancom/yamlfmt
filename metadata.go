@@ -20,7 +20,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/google/yamlfmt/internal/collections"
+	"github.com/fancom/yamlfmt/internal/collections"
 )
 
 const MetadataIdentifier = "!yamlfmt!"

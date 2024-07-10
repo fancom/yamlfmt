@@ -3,7 +3,7 @@
 Starting in v0.7.1, `yamlfmt` can be used as a hook for the popular [pre-commit](https://pre-commit.com/) tool. To include a `yamlfmt` hook in your `pre-commit` config, add the following to the `repos` block in your `.pre-commit-config.yaml`:
 
 ```yaml
-- repo: https://github.com/google/yamlfmt
+- repo: https://github.com/fancom/yamlfmt
   rev: v0.10.0
   hooks:
     - id: yamlfmt
@@ -16,7 +16,7 @@ When running yamlfmt with the `pre-commit` hook, the only way to configure it is
 If you would prefer to manage your `yamlfmt` installation yourself, you can have the hook use your installed `yamlfmt` binary instead. As long as `yamlfmt` is in your PATH, you can override the `language` setting to `system`.
 
 ```yaml
-- repo: https://github.com/google/yamlfmt
+- repo: https://github.com/fancom/yamlfmt
   rev: v0.10.0
   hooks:
     - id: yamlfmt

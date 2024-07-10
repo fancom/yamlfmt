@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/braydonk/yaml"
-	"github.com/google/yamlfmt/formatters/basic/anchors"
+	"github.com/fancom/yamlfmt/formatters/basic/anchors"
 )
 
 func TestCheck(t *testing.T) {

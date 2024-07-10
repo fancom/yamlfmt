@@ -24,8 +24,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/yamlfmt/internal/assert"
-	"github.com/google/yamlfmt/internal/tempfile"
+	"github.com/fancom/yamlfmt/internal/assert"
+	"github.com/fancom/yamlfmt/internal/tempfile"
 )
 
 const (

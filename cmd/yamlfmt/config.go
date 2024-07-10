@@ -25,10 +25,10 @@ import (
 	"strings"
 
 	"github.com/braydonk/yaml"
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/command"
-	"github.com/google/yamlfmt/internal/collections"
-	"github.com/google/yamlfmt/internal/logger"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/command"
+	"github.com/fancom/yamlfmt/internal/collections"
+	"github.com/fancom/yamlfmt/internal/logger"
 	"github.com/mitchellh/mapstructure"
 )
 

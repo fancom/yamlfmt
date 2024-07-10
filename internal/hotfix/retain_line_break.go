@@ -22,7 +22,7 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 )
 
 const lineBreakPlaceholder = "#magic___^_^___line"

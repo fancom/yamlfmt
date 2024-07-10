@@ -17,7 +17,7 @@ package basic
 import (
 	"runtime"
 
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 )
 
 type Config struct {

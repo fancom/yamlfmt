@@ -21,8 +21,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/engine"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/engine"
 	"github.com/mitchellh/mapstructure"
 
 	"github.com/braydonk/yaml"

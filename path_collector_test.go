@@ -21,9 +21,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/internal/collections"
-	"github.com/google/yamlfmt/internal/tempfile"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/internal/collections"
+	"github.com/fancom/yamlfmt/internal/tempfile"
 )
 
 func TestFilepathCollector(t *testing.T) {

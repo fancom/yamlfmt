@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/google/yamlfmt/internal/collections"
-	"github.com/google/yamlfmt/internal/multilinediff"
+	"github.com/fancom/yamlfmt/internal/collections"
+	"github.com/fancom/yamlfmt/internal/multilinediff"
 )
 
 type Operation int

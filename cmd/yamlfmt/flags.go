@@ -20,8 +20,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/engine"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/engine"
 )
 
 var (

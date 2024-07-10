@@ -16,10 +16,10 @@ package basic
 
 import (
 	"github.com/braydonk/yaml"
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/formatters/basic/anchors"
-	"github.com/google/yamlfmt/internal/features"
-	"github.com/google/yamlfmt/internal/hotfix"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/formatters/basic/anchors"
+	"github.com/fancom/yamlfmt/internal/features"
+	"github.com/fancom/yamlfmt/internal/hotfix"
 )
 
 func ConfigureFeaturesFromConfig(config *Config) yamlfmt.FeatureList {

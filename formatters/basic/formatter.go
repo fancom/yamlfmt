@@ -20,7 +20,7 @@ import (
 	"io"
 
 	"github.com/braydonk/yaml"
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 	"github.com/mitchellh/mapstructure"
 )
 

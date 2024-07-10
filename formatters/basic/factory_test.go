@@ -17,8 +17,8 @@ package basic_test
 import (
 	"testing"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/formatters/basic"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/formatters/basic"
 )
 
 func TestNewWithConfigRetainsDefaultValues(t *testing.T) {

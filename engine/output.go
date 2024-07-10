@@ -17,7 +17,7 @@ package engine
 import (
 	"fmt"
 
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 )
 
 type EngineOutputFormat string

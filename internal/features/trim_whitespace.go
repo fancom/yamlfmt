@@ -19,7 +19,7 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 )
 
 func MakeFeatureTrimTrailingWhitespace(linebreakStr string) yamlfmt.Feature {

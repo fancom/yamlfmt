@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/google/yamlfmt"
+	"github.com/fancom/yamlfmt"
 )
 
 // Engine that will process each file one by one consecutively.

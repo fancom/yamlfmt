@@ -19,7 +19,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/google/yamlfmt/internal/collections"
+	"github.com/fancom/yamlfmt/internal/collections"
 )
 
 type Path struct {

@@ -18,8 +18,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/yamlfmt"
-	"github.com/google/yamlfmt/formatters/basic"
+	"github.com/fancom/yamlfmt"
+	"github.com/fancom/yamlfmt/formatters/basic"
 )
 
 func newFormatter(config *basic.Config) *basic.BasicFormatter {
