@@ -351,3 +351,24 @@ b: 2
 		t.Fatalf("expected: '%s', got: '%s'", expectedYml, resultStr)
 	}
 }
+
+func TestExpandShortlists(t *testing.T) {
+	config := basic.DefaultConfig()
+	config.ExpandShortLists = true
+	f := newFormatter(config)
+
+	yml := `  addresses: ["heating/$heating/setpoint/0", "heating/$heating/setpoint/1"]`
+	expectedYml := `addresses:
+  - heating/$heating/setpoint/0
+  - heating/$heating/setpoint/1
+`
+
+	result, err := f.Format([]byte(yml))
+	if err != nil {
+		t.Fatalf("expected formatting to pass, returned error: %v", err)
+	}
+	resultStr := string(result)
+	if resultStr != expectedYml {
+		t.Fatalf("expected: '%s', got: '%s'", expectedYml, resultStr)
+	}
+}

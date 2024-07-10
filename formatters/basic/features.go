@@ -46,6 +46,12 @@ func ConfigureFeaturesFromConfig(config *Config) yamlfmt.FeatureList {
 			features.MakeFeatureEOFNewline(lineSep),
 		)
 	}
+	if config.ExpandShortLists {
+		configuredFeatures = append(
+			configuredFeatures,
+			features.MakeFeatureExpandShortlists(lineSep, config.Indent, config.IndentlessArrays),
+		)
+	}
 	return configuredFeatures
 }
 

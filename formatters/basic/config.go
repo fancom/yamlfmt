@@ -34,6 +34,7 @@ type Config struct {
 	PadLineComments        int                    `mapstructure:"pad_line_comments"`
 	TrimTrailingWhitespace bool                   `mapstructure:"trim_trailing_whitespace"`
 	EOFNewline             bool                   `mapstructure:"eof_newline"`
+	ExpandShortLists       bool                   `mapstructure:"expand_short_lists"`
 }
 
 func DefaultConfig() *Config {
