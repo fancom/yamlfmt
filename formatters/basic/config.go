@@ -35,6 +35,7 @@ type Config struct {
 	TrimTrailingWhitespace bool                   `mapstructure:"trim_trailing_whitespace"`
 	EOFNewline             bool                   `mapstructure:"eof_newline"`
 	ExpandShortLists       bool                   `mapstructure:"expand_short_lists"`
+	StripStringQuotes      bool                   `mapstructure:"strip_string_quotes"`
 }
 
 func DefaultConfig() *Config {
