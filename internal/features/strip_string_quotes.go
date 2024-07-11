@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"bytes"
 	"regexp"
+	"strconv"
 	"strings"
-	"unicode"
 
 	"github.com/fancom/yamlfmt"
 )
@@ -79,11 +79,7 @@ func isNumeric(s string) bool {
 	if s == "" {
 		return false
 	}
+	_, err := strconv.ParseFloat(s, 64)
 
-	for _, char := range s {
-		if !unicode.IsDigit(char) {
-			return false
-		}
-	}
-	return true
+	return err == nil
 }
