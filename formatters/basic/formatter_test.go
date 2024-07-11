@@ -383,6 +383,7 @@ func TestStripStringQuotes(t *testing.T) {
 clock: "Clock"
 value: "0"
 symbol: "&item"
+boolean: "true"
 object:
 - symbol: "Clock"
 array:
@@ -396,6 +397,7 @@ array:
 clock: Clock
 value: "0"
 symbol: "&item"
+boolean: "true"
 object:
 - symbol: Clock
 array:

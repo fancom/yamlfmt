@@ -13,6 +13,8 @@ import (
 var keyValuePattern = regexp.MustCompile(`^\s*(- )?([\w\-]+)\s*:\s*(.*)\s*$`)
 var listValuePattern = regexp.MustCompile(`^\s*-\s*(.*)\s*$`)
 
+var boolValues = []string{"true", "false", "on", "off", "yes", "no"}
+
 func MakeFeatureStripStringQuotes(linebreakStr string) yamlfmt.Feature {
 	return yamlfmt.Feature{
 		Name:        "Strip quotes in strings",
@@ -58,7 +60,29 @@ func stripQuotes(txt string, value string) string {
 	if isNumeric(value) {
 		return txt
 	}
+	if isBoolean(value) {
+		return txt
+	}
 	return strings.Replace(txt, value, value[1:len(value)-1], 1)
+}
+
+func isBoolean(s string) bool {
+	s = strings.Trim(s, `"'`)
+	if s == "" {
+		return false
+	}
+	if !contains(s, boolValues) {
+		return false
+	}
+	return true
+}
+func contains(value string, array []string) bool {
+	for _, v := range array {
+		if value == strings.ToLower(v) {
+			return true
+		}
+	}
+	return false
 }
 func containsSpecialSymbols(s string) bool {
 	specialSymbols := map[rune]struct{}{
