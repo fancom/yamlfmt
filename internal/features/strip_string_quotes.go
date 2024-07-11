@@ -63,6 +63,9 @@ func stripQuotes(txt string, value string) string {
 	if isBoolean(value) {
 		return txt
 	}
+	if len(value) < 3 {
+		return txt
+	}
 	return strings.Replace(txt, value, value[1:len(value)-1], 1)
 }
 
@@ -78,7 +81,7 @@ func isBoolean(s string) bool {
 }
 func contains(value string, array []string) bool {
 	for _, v := range array {
-		if value == strings.ToLower(v) {
+		if strings.EqualFold(value, v) {
 			return true
 		}
 	}
