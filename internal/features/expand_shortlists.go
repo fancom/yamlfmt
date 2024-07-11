@@ -53,8 +53,6 @@ func expandShortlistsFeature(linebreakStr string, ident int, indentlessArrays bo
 					items := strings.Split(extracted, ",")
 					for i := range items {
 						items[i] = strings.TrimSpace(items[i])
-						//TODO(AZ): move quotes removing into separate feature
-						items[i] = strings.Trim(items[i], "\"")
 						buf.WriteString(padding + "- " + items[i])
 						buf.WriteString(linebreakStr)
 					}
