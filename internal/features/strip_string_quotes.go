@@ -3,7 +3,6 @@ package features
 import (
 	"bufio"
 	"bytes"
-	"fmt"
 	"regexp"
 	"strings"
 	"unicode"
@@ -28,11 +27,9 @@ func stripStringQuotesFeature(linebreakStr string) yamlfmt.FeatureFunc {
 		scanner := bufio.NewScanner(reader)
 		for scanner.Scan() {
 			txt := scanner.Text()
-
 			match := keyValuePattern.FindStringSubmatch(txt)
 			if len(match) >= 3 {
 				value := match[2]
-				fmt.Println(value)
 				buf.WriteString(stripQuotes(txt, value))
 				buf.WriteString(linebreakStr)
 			} else {
@@ -41,7 +38,6 @@ func stripStringQuotesFeature(linebreakStr string) yamlfmt.FeatureFunc {
 					value := match[1]
 					buf.WriteString(stripQuotes(txt, value))
 					buf.WriteString(linebreakStr)
-
 				} else {
 					buf.WriteString(txt)
 					buf.WriteString(linebreakStr)
