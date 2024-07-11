@@ -10,7 +10,7 @@ import (
 	"github.com/fancom/yamlfmt"
 )
 
-var keyValuePattern = regexp.MustCompile(`^\s*([\w\-]+)\s*:\s*(.*)\s*$`)
+var keyValuePattern = regexp.MustCompile(`^\s*(- )?([\w\-]+)\s*:\s*(.*)\s*$`)
 var listValuePattern = regexp.MustCompile(`^\s*-\s*(.*)\s*$`)
 
 func MakeFeatureStripStringQuotes(linebreakStr string) yamlfmt.Feature {
@@ -28,8 +28,8 @@ func stripStringQuotesFeature(linebreakStr string) yamlfmt.FeatureFunc {
 		for scanner.Scan() {
 			txt := scanner.Text()
 			match := keyValuePattern.FindStringSubmatch(txt)
-			if len(match) >= 3 {
-				value := match[2]
+			if len(match) >= 4 {
+				value := match[3]
 				buf.WriteString(stripQuotes(txt, value))
 				buf.WriteString(linebreakStr)
 			} else {

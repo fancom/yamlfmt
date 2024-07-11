@@ -383,21 +383,27 @@ func TestStripStringQuotes(t *testing.T) {
 clock: "Clock"
 value: "0"
 symbol: "&item"
+object:
+- symbol: "Clock"
 array:
 - item1
 - "item2"
 - "3"
 - "@item4"
+- "1.0"
 `
 	expectedYml := `guid: "\"guid\""
 clock: Clock
 value: "0"
 symbol: "&item"
+object:
+- symbol: Clock
 array:
 - item1
 - item2
 - "3"
 - "@item4"
+- "1.0"
 `
 
 	result, err := f.Format([]byte(yml))
