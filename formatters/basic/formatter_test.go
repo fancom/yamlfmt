@@ -386,6 +386,8 @@ symbol: "&item"
 boolean: "true"
 object:
 - symbol: "Clock"
+- id: "base_configuration-base_general-system"
+targetScreenName: "configuration-system-management"
 array:
 - item1
 - "item2"
@@ -400,6 +402,8 @@ symbol: "&item"
 boolean: "true"
 object:
 - symbol: Clock
+- id: base_configuration-base_general-system
+targetScreenName: configuration-system-management
 array:
 - item1
 - item2
