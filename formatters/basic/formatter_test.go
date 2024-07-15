@@ -351,3 +351,73 @@ b: 2
 		t.Fatalf("expected: '%s', got: '%s'", expectedYml, resultStr)
 	}
 }
+
+func TestExpandShortlists(t *testing.T) {
+	config := basic.DefaultConfig()
+	config.ExpandShortLists = true
+	f := newFormatter(config)
+
+	yml := `  addresses: ["heating/$heating/setpoint/0", "heating/$heating/setpoint/1"]`
+	expectedYml := `addresses:
+  - "heating/$heating/setpoint/0"
+  - "heating/$heating/setpoint/1"
+`
+
+	result, err := f.Format([]byte(yml))
+	if err != nil {
+		t.Fatalf("expected formatting to pass, returned error: %v", err)
+	}
+	resultStr := string(result)
+	if resultStr != expectedYml {
+		t.Fatalf("expected: '%s', got: '%s'", expectedYml, resultStr)
+	}
+}
+
+func TestStripStringQuotes(t *testing.T) {
+	config := basic.DefaultConfig()
+	config.StripStringQuotes = true
+	config.IndentlessArrays = true
+	f := newFormatter(config)
+
+	yml := `guid: "\"guid\""
+clock: "Clock"
+value: "0"
+symbol: "&item"
+boolean: "true"
+object:
+- symbol: "Clock"
+- id: "base_configuration-base_general-system"
+targetScreenName: "configuration-system-management"
+array:
+- item1
+- "item2"
+- "3"
+- "@item4"
+- "1.0"
+`
+	expectedYml := `guid: "\"guid\""
+clock: Clock
+value: "0"
+symbol: "&item"
+boolean: "true"
+object:
+- symbol: Clock
+- id: base_configuration-base_general-system
+targetScreenName: configuration-system-management
+array:
+- item1
+- item2
+- "3"
+- "@item4"
+- "1.0"
+`
+
+	result, err := f.Format([]byte(yml))
+	if err != nil {
+		t.Fatalf("expected formatting to pass, returned error: %v", err)
+	}
+	resultStr := string(result)
+	if resultStr != expectedYml {
+		t.Fatalf("expected: '%s', got: '%s'", expectedYml, resultStr)
+	}
+}
